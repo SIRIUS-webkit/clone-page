@@ -1,0 +1,129 @@
+.footer-section {
+  position: relative;
+  padding: 90px 0px 60px;
+  background-color: #f1f1f1;
+  .row {
+    h1 {
+      color: #d5333e;
+      letter-spacing: 0.03em;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+  .footer-wrapper {
+    position: relative;
+    margin: 90px auto;
+    width: 80%;
+    @include media("<=991px") {
+      min-width: 130%;
+      margin-left: -85px;
+    }
+    @include media("<=tablet") {
+      min-width: 100%;
+      margin-left: 0;
+    }
+    .left-line,
+    .left-arrow-line {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: gray;
+        top: 0;
+        left: 90%;
+        @include media("<=991px") {
+          display: none;
+        }
+      }
+      h3 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          color: red;
+        }
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+    .expand-right {
+      @include media("<=991px") {
+        width: 100%;
+        margin: 2px 0;
+        border-bottom: 1px solid #000;
+      }
+    }
+    .right-line {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        background-color: gray;
+        top: 0;
+        left: 100%;
+      }
+    }
+    .animate-foot {
+      h3 {
+        font-size: 26px;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          color: red;
+        }
+        img {
+          width: 15px;
+          height: 15px;
+          @include media("<=991px") {
+            right: 60px;
+            position: absolute;
+          }
+          @include media("<=tablet") {
+            right: 0;
+          }
+        }
+      }
+      p {
+        font-size: 12px;
+      }
+      .move-left {
+        margin-left: -20px;
+        @include media("<=991px") {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .final-wrapper {
+    .social-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        img {
+          width: 25px;
+          height: 25px;
+          margin: 0 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    .copy-text {
+      margin-top: 29px;
+      text-align: center;
+    }
+    .address-text {
+      text-align: center;
+    }
+  }
+}
